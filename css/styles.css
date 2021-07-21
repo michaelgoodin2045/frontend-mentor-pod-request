@@ -12,8 +12,7 @@ html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockq
   vertical-align: baseline;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: none;
-          text-size-adjust: none;
+  text-size-adjust: none;
 }
 
 footer, header, nav, section, main {
@@ -290,7 +289,7 @@ input {
   position: relative;
   top: 62px;
   margin-left: 120px;
-  content: url("../../assets/desktop/logo.svg");
+  content: url("../assets/desktop/logo.svg");
 }
 @media screen and (min-width: 768px) {
   .logo .logo-image {

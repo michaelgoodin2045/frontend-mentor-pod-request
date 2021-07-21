@@ -23,7 +23,7 @@
     position: relative;
     top: 62px;
     margin-left: 120px;
-    content: url('../../assets/desktop/logo.svg');
+    content: url('../assets/desktop/logo.svg');
     @include u.breakpoint(tablet) {
       top: 50px;
       margin-left: 39px;
