@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Pod request access landing page</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="background-image"></div>
+      <div class="background-design"></div>
+      <div class="logo">
+        <div class="logo-image"></div>
+      </div>
+      <div class="card">
+        <div class="title">
+          <span class="green">publish your podcasts</span>
+          <span class="white">everywhere.</span>
+        </div>
+        <div class="blurb">
+          Upload your audio to Pod with a single click. We’ll then distribute
+          your podcast to Spotify, Apple Podcasts, Google Podcasts, Pocket Casts
+          and more!
+        </div>
+        <div class="podcast-icons">
+          <ul class="podcast-links">
+            <li class="podcast-link spotify">
+              <a href="http://www.spotify.com" target="_blank"></a>
+            </li>
+            <li class="podcast-link apple">
+              <a
+                href="https://www.apple.com/apple-podcasts/"
+                target="_blank"
+              ></a>
+            </li>
+            <li class="podcast-link google">
+              <a href="https://podcasts.google.com/" target="_blank"></a>
+            </li>
+            <li class="podcast-link pocket">
+              <a href="https://www.pocketcasts.com/" target="_blank"></a>
+            </li>
+          </ul>
+        </div>
+        <div class="submit-email">
+          <form id="form" action="">
+            <label for="email"></label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email address"
+            />
+            <p class="error"></p>
+            <button type="submit" id="submit">Request Access</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,191 @@
+@use '../base/' as *;
+@use '../utilities/' as u;
+
+.card {
+  width: 327px;
+  height: 398px;
+  position: relative;
+  top: 0;
+  margin-left: 24px;
+  @include u.breakpoint(tablet) {
+    width: 635px;
+    height: 509px;
+    z-index: 5;
+    margin-left: 39px;
+    top: -870px;
+    background: $clr--dark;
+  }
+  @include u.breakpoint(desktop) {
+    top: -744px;
+    margin-left: 165px;
+    width: 723px;
+    height: 509px;
+  }
+  & .title {
+    width: 327px;
+    height: 76px;
+    font-size: 26px;
+    line-height: 38px;
+    text-transform: uppercase;
+    text-align: center;
+    @include u.breakpoint(tablet) {
+      width: 635px;
+      height: 112px;
+      font-size: 48px;
+      line-height: 56px;
+      text-align: left;
+      padding-top: 93px;
+    }
+    @include u.breakpoint(desktop) {
+      padding-top: 88px;
+      width: 665px;
+      height: 124px;
+      font-size: 52px;
+      line-height: 62px;
+    }
+    & .green {
+      color: $clr--green;
+    }
+    & .white {
+      color: $clr--white;
+    }
+  }
+  & .blurb {
+    margin-top: 16px;
+    color: $clr--silver;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    @include u.breakpoint(tablet) {
+      width: 445px;
+      height: 84px;
+      margin-top: 115px;
+      text-align: left;
+      font-size: 18px;
+      line-height: 28px;
+    }
+    @include u.breakpoint(desktop) {
+      margin-top: 117px;
+    }
+  }
+  & .podcast-icons {
+    width: 315px;
+    height: 17px;
+    position: relative;
+    top: 33px;
+    margin-left: 6px;
+    @include u.breakpoint(tablet) {
+      width: 536px;
+      heigth: 29px;
+      margin-left: 0;
+      top: 170px;
+    }
+    @include u.breakpoint(desktop) {
+      top: 157px;
+    }
+    & .podcast-links {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      & .podcast-link {
+        & a {
+          text-decoration: none;
+          zoom: 60%;
+          color: $clr--light-blue-gray;
+          @include u.breakpoint(tablet) {
+            zoom: 100%;
+          }
+        }
+        &.spotify {
+          & a {
+            content: url('../assets/desktop/spotify.svg');
+          }
+        }
+        &.google {
+          & a {
+            content: url('../assets/desktop/google-podcasts.svg');
+          }
+        }
+        &.apple {
+          & a {
+            content: url('../assets/desktop/apple-podcast.svg');
+          }
+        }
+        &.pocket {
+          & a {
+            content: url('../assets/desktop/pocket-casts.svg');
+          }
+        }
+      }
+    }
+  }
+  & .submit-email {
+    width: 327px;
+    height: 108px;
+    position: relative;
+    top: 81px;
+    @include u.breakpoint(tablet) {
+      width: 427px;
+      top: 20px;
+    }
+    & input[type='email'] {
+      width: 327px;
+      height: 46px;
+      border: none;
+      border-radius: 28px;
+      font-size: 14px;
+      font-weight: 700;
+      padding-left: 32px;
+      background-color: $clr--dark-blue-gray;
+      outline: none;
+      @include u.breakpoint(tablet) {
+        width: 427px;
+        height: 56px;
+      }
+      &:active {
+        background-color: $clr--dark-blue-gray;
+        color: $clr--white;
+      }
+      &:focus {
+        background-color: $clr--dark-blue-gray;
+        color: $clr--white;
+      }
+    }
+    & #submit {
+      width: 326px;
+      height: 46px;
+      position: absolute;
+      top: 62px;
+      border: none;
+      border-radius: 28px;
+      font-size: 14px;
+      line-height: 28px;
+      font-weight: 700;
+      background-color: $clr--green;
+      color: $clr--dark;
+      cursor: pointer;
+      @include u.breakpoint(tablet) {
+        width: 162px;
+        height: 46px;
+        top: 5px;
+        left: 260px;
+      }
+      &:hover,
+      :active,
+      :focus {
+        background-color: $clr--green-hover;
+      }
+    }
+    & .error {
+      color: $clr--error;
+      font-size: 12px;
+      font-weight: 700;
+      padding-left: 32px;
+    }
+  }
+}
+
+[placeholder] {
+  @include u.placeholder($clr--silver, 14px);
+}

@@ -1,0 +1,36 @@
+@use '../base/' as *;
+@use '../utilities/' as u;
+
+.logo {
+  width: 375px;
+  height: 175px;
+  position: relative;
+  top: 0;
+  @include u.breakpoint(tablet) {
+    width: 277px;
+    height: 258px;
+    top: -870px;
+    left: 0;
+  }
+  @include u.breakpoint(desktop) {
+    width: 552px;
+    height: 261px;
+    top: -743px;
+  }
+  & .logo-image {
+    width: 134.85px;
+    height: 56px;
+    position: relative;
+    top: 62px;
+    margin-left: 120px;
+    content: url('../../assets/desktop/logo.svg');
+    @include u.breakpoint(tablet) {
+      top: 50px;
+      margin-left: 39px;
+    }
+    @include u.breakpoint(desktop) {
+      top: 102px;
+      margin-left: 152px;
+    }
+  }
+}
